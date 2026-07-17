@@ -22,7 +22,7 @@ Unlike a generic support summarizer, the product creates a reusable regression-t
 
 ## Judge walkthrough
 
-1. Open the app; the SaaS billing sample is immediately visible without an API call.
+1. Open the app; the verified GPT-5.6 SaaS billing sample is immediately visible without an API call or shared credential.
 2. Select **Refund after cancellation** and inspect the missing ticket dots and cited gap evidence.
 3. Click **Draft article patch** to create an editable GPT-5.6 proposal.
 4. Click **Replay questions** and inspect the projected before/after result.
@@ -41,12 +41,12 @@ Unlike a generic support summarizer, the product creates a reusable regression-t
 - Editable Markdown output and export
 - Conservative four-state coverage model with contradiction blocking
 - `store: false` for OpenAI Responses
-- 12 focused automated tests plus a live GPT-5.6 integration smoke test
+- 14 focused automated tests plus a live GPT-5.6 integration smoke test
 
 ## URLs to complete
 
-- **Public demo:** pending deployment
-- **Code repository:** pending publication
+- **Public demo:** `https://6a5a206e052406615053e2f3--support-gap-radar.netlify.app`
+- **Code repository:** `https://github.com/Garima-digitalpro/support-gap-radar`
 - **Demo video:** pending recording/upload
 - **Codex `/feedback` session ID:** run `/feedback` in the primary build task after the final implementation pass
 
@@ -61,8 +61,8 @@ Unlike a generic support summarizer, the product creates a reusable regression-t
 - [x] Clear judge walkthrough
 - [x] Lint, automated tests, production build, and live API smoke test pass
 - [ ] Browser and responsive QA screenshots captured
-- [ ] Public demo deployed and tested without local state
-- [ ] Public GitHub repository created and tested from a clean clone
+- [x] Public demo deployed and tested without local state
+- [x] Public GitHub repository created
 - [ ] Under-three-minute YouTube demo uploaded
 - [ ] Codex `/feedback` submitted and session ID recorded
 - [ ] Devpost form completed before the deadline

@@ -74,6 +74,9 @@ export function ArticleWorkbench({ open, cluster, draft, markdown, replay, busy,
             <section className="provenance-block">
               <h3>Source basis</h3>
               <div>{draft.sourceBasis.map((source) => <span key={source}>{source}</span>)}</div>
+              {draft.sampleProvenance ? (
+                <p className="sample-provenance"><strong>Sample provenance:</strong> {draft.sampleProvenance}</p>
+              ) : null}
               {draft.unansweredQuestions?.length ? (
                 <p><strong>Still unanswered:</strong> {draft.unansweredQuestions.join(" · ")}</p>
               ) : null}

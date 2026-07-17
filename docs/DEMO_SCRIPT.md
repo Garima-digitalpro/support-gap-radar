@@ -30,7 +30,7 @@
 
 **Voiceover:**
 
-“For a safe cluster, GPT-5.6 drafts a self-contained Markdown patch using the current docs and consistent resolved outcomes. The evidence sources stay visible and the article is editable. If the docs and support outcomes conflict, like this Enterprise export limit, the app blocks a publishable draft and asks for a human policy decision.”
+“For a safe cluster, GPT-5.6 drafts a self-contained Markdown patch using the current docs and consistent resolved outcomes. This judge sample loads the exact result captured during live verification; custom uploads invoke the server API. The evidence sources stay visible and the article is editable. If docs and outcomes conflict, the app blocks publishing and asks for a human policy decision.”
 
 ## 1:35–2:05 — Knowledge Replay
 
@@ -46,7 +46,7 @@
 
 **Voiceover:**
 
-“I built the majority of the project in one Codex task. Codex helped research the competitive baseline, turn the idea into regression testing, generate the visual direction, implement the full React and serverless workflow, create synthetic datasets, and verify it with lint, twelve tests, a production build, and a live GPT-5.6 smoke test.”
+“I built the majority of the project in one Codex task. Codex helped research the competitive baseline, turn the idea into regression testing, generate the visual direction, implement the full React and serverless workflow, create synthetic datasets, and verify it with lint, fourteen tests, a production build, and a live GPT-5.6 smoke test.”
 
 ## 2:27–2:45 — Close
 

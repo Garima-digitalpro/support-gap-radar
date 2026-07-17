@@ -7,7 +7,7 @@ import { ReplayRail } from "./components/ReplayRail.jsx";
 import { ReplayReport } from "./components/ReplayReport.jsx";
 import { Sidebar } from "./components/Sidebar.jsx";
 import { SourcesPanel } from "./components/SourcesPanel.jsx";
-import { demoAnalysis, demoWorkspace } from "./data/demoWorkspace.js";
+import { demoAnalysis, demoDraft, demoReplay, demoWorkspace } from "./data/demoWorkspace.js";
 import { postJson } from "./lib/api.js";
 import { exportMarkdown, parseDocumentFile, parseTicketsFile } from "./lib/fileParsers.js";
 
@@ -172,6 +172,14 @@ export default function App() {
       setWorkbenchOpen(true);
       return;
     }
+    if (analysis?.workspaceId === "demo-saas-support" && selectedCluster.clusterId === 0) {
+      const nextDraft = { ...demoDraft, clusterId: selectedCluster.clusterId };
+      setDraft(nextDraft);
+      setMarkdown(nextDraft.markdown);
+      setReplay(null);
+      setWorkbenchOpen(true);
+      return;
+    }
     setBusy("drafting");
     setError(null);
     setWorkbenchOpen(true);
@@ -195,6 +203,14 @@ export default function App() {
 
   const replayPatch = async () => {
     if (!selectedCluster || !draft) return;
+    if (
+      analysis?.workspaceId === "demo-saas-support"
+      && selectedCluster.clusterId === 0
+      && markdown === demoDraft.markdown
+    ) {
+      setReplay(demoReplay);
+      return;
+    }
     setBusy("replaying");
     setError(null);
     try {

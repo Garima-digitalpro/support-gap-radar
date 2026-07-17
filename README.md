@@ -8,6 +8,8 @@ Support Gap Radar is a documentation regression-testing workspace for support an
 **OpenAI models:** `gpt-5.6` and `text-embedding-3-small`  
 **Status:** Hackathon MVP with an immediately explorable sample workspace and a live custom-upload workflow.
 
+**Public demo:** [Open Support Gap Radar](https://6a5a206e052406615053e2f3--support-gap-radar.netlify.app)
+
 ![Support Gap Radar evidence dashboard](./docs/implementation-desktop.png)
 
 ## Why this is different
@@ -84,7 +86,7 @@ npm run dev
 
 Open the local URL printed by Netlify CLI, normally `http://localhost:8888`.
 
-The initial SaaS workspace is precomputed, so judges can inspect the radar without an API call. Uploading custom data, drafting, and replaying use the live API.
+The initial SaaS workspace and its refund patch/replay are a precomputed, verified GPT-5.6 result, so judges can inspect the complete loop without sharing a credential. Uploading and analyzing custom data uses the live API; editing the sample patch and rerunning it also switches to live evaluation.
 
 ## Test it with sample data
 
@@ -115,6 +117,7 @@ Accepted aliases include `ticket_id`, `case_id`, `title`, `body`, `message`, `qu
 - Model output uses Zod-backed Structured Outputs
 - API errors are converted to safe, actionable UI messages
 - OpenAI Responses are created with `store: false`
+- The bundled judge path is transparently labeled in code as a GPT-5.6 result captured during the verified build session
 
 Run all local checks:
 
@@ -137,7 +140,7 @@ The majority of this project was built in one Codex task. Codex helped:
 - design the React and serverless architecture;
 - implement file parsing, deterministic clustering, retrieval, Structured Outputs, guardrails, and historical replay;
 - create three synthetic datasets, focused tests, responsive UI, documentation, and deployment configuration;
-- run lint, tests, production builds, security checks, and a live GPT-5.6 smoke test.
+- run lint, 14 tests, production builds, security checks, and a live GPT-5.6 smoke test.
 
 Key product decisions are recorded in [`docs/DECISIONS.md`](./docs/DECISIONS.md). The design system is recorded in [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md).
 
@@ -165,6 +168,10 @@ docs/                Design, decisions, demo script, and submission materials
 ## Privacy and responsible use
 
 The app is an MVP, not a production data processor. Use synthetic or appropriately redacted support data. Uploaded text is sent to the configured OpenAI API project only when a live analysis, draft, or replay is requested. Human review is required before publishing generated documentation.
+
+## Netlify deployment
+
+The bundled judge workflow works without a hosted credential. To enable custom uploads on a Netlify deployment, add `OPENAI_API_KEY` manually in **Project configuration → Environment variables**, scope it to Functions, and redeploy. Never put it in a `VITE_` variable or commit it to the repository.
 
 ## License
 

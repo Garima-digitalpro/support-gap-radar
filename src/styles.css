@@ -1144,6 +1144,18 @@ textarea:focus-visible,
   line-height: 1.5;
 }
 
+.sample-provenance {
+  color: #36517f !important;
+}
+
+.replay-scoreboard small {
+  display: block;
+  margin-top: 6px;
+  color: #36517f;
+  font-size: 10px;
+  font-weight: 650;
+}
+
 .workbench-replay-result {
   display: grid;
   grid-template-columns: auto auto auto 1fr;

@@ -39,3 +39,7 @@ The MVP uses recorded files rather than live support integrations. This keeps se
 ## D010 — Parse common document formats close to the user
 
 CSV, Markdown, text, PDF, and `.docx` extraction happen in the browser. Only legacy `.doc` needs a guarded server parser. This reduces unnecessary file transfer while keeping the OpenAI key and model calls server-side.
+
+## D011 — Make the public judge path credential-free
+
+The default refund patch and its question-level replay are the exact GPT-5.6 result captured during live end-to-end QA. They are bundled as transparent sample provenance so judges can complete the distinctive workflow without receiving a shared API credential. Any custom upload or edited patch still invokes the real server-side API.

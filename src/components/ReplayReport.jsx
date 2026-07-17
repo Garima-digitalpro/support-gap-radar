@@ -23,7 +23,7 @@ export function ReplayReport({ cluster, tickets, replay, onBack, onDraft }) {
           <div><span>Before coverage</span><strong>{replay.beforeCoverage}%</strong></div>
           <div><span>Projected coverage</span><strong>{replay.afterCoverage}%</strong></div>
           <div><span>Questions improved</span><strong>{replay.improvedCount}</strong></div>
-          <p>{replay.summary}</p>
+          <p>{replay.summary}{replay.sampleProvenance ? <small>{replay.sampleProvenance}</small> : null}</p>
         </div>
       ) : (
         <div className="replay-empty">
