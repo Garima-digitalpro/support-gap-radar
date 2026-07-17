@@ -62,7 +62,7 @@ Unlike a generic support summarizer, the product creates a reusable regression-t
 - [x] Lint, automated tests, production build, and live API smoke test pass
 - [ ] Browser and responsive QA screenshots captured
 - [x] Public demo deployed and tested without local state
-- [x] Public GitHub repository created
+- [x] Public GitHub repository created and verified from a clean clone
 - [ ] Under-three-minute YouTube demo uploaded
 - [ ] Codex `/feedback` submitted and session ID recorded
 - [ ] Devpost form completed before the deadline
