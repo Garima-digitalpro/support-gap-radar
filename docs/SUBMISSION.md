@@ -45,7 +45,7 @@ Unlike a generic support summarizer, the product creates a reusable regression-t
 
 ## URLs to complete
 
-- **Public demo:** `https://6a5a206e052406615053e2f3--support-gap-radar.netlify.app`
+- **Public demo:** `https://buildweek--support-gap-radar.netlify.app`
 - **Code repository:** `https://github.com/Garima-digitalpro/support-gap-radar`
 - **Demo video:** pending recording/upload
 - **Codex `/feedback` session ID:** run `/feedback` in the primary build task after the final implementation pass

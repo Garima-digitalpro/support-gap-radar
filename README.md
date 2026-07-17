@@ -8,7 +8,7 @@ Support Gap Radar is a documentation regression-testing workspace for support an
 **OpenAI models:** `gpt-5.6` and `text-embedding-3-small`  
 **Status:** Hackathon MVP with an immediately explorable sample workspace and a live custom-upload workflow.
 
-**Public demo:** [Open Support Gap Radar](https://6a5a206e052406615053e2f3--support-gap-radar.netlify.app)
+**Public demo:** [Open Support Gap Radar](https://buildweek--support-gap-radar.netlify.app)
 
 ![Support Gap Radar evidence dashboard](./docs/implementation-desktop.png)
 
