@@ -1,0 +1,9 @@
+id,subject,description,resolution,priority,created_at
+P-101,Payout pending,"My weekly seller payout has been pending for four days.","Released after bank verification completed.",high,2026-05-02
+P-102,Weekend payout,"Do payouts arrive on Saturday?","Explained that payout processing runs on business days only.",normal,2026-05-04
+P-103,Change bank account,"How do I change the bank account before the next payout?","Updated bank details and applied a 48-hour security hold.",high,2026-05-07
+P-104,Negative balance,"Why was my payout reduced after a customer refund?","Explained that refunds and chargebacks are deducted from the next payout.",normal,2026-05-09
+P-105,Minimum payout,"Will a balance of 8 dollars be paid this week?","Explained the 20-dollar minimum and balance rollover.",normal,2026-05-12
+P-106,International payout fee,"What fee applies to my EUR payout?","Confirmed a 1 percent conversion fee for non-base-currency payouts.",normal,2026-05-15
+P-107,Missing payout email,"I was paid but did not receive the payout statement.","Regenerated the statement and corrected the billing email.",low,2026-05-18
+P-108,Tax hold,"Why is my December payout blocked?","Requested missing tax identity information before release.",urgent,2026-05-21

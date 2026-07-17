@@ -1,0 +1,52 @@
+{
+  "name": "support-gap-radar",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Documentation regression testing powered by GPT-5.6.",
+  "scripts": {
+    "dev": "netlify dev",
+    "dev:vite": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "smoke:live": "node scripts/smoke-live.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "lucide-react": "^0.468.0",
+    "mammoth": "^1.11.0",
+    "openai": "^6.16.0",
+    "papaparse": "^5.5.3",
+    "pdfjs-dist": "^5.4.530",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "word-extractor": "^1.0.4",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "jsdom": "^27.2.0",
+    "netlify-cli": "^23.11.1",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.15"
+  },
+  "overrides": {
+    "rollup": "^4.62.2"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

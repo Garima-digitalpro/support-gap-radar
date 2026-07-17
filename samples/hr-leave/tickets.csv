@@ -1,0 +1,9 @@
+id,subject,description,resolution,priority,created_at
+L-101,Carry over leave,"How many unused annual leave days can I carry into next year?","Confirmed five days can carry and expire on March 31.",normal,2026-01-04
+L-102,Probation leave,"Can I take annual leave during probation?","Manager approved accrued leave after the first 30 days.",normal,2026-01-08
+L-103,Half-day leave,"Where do I request a half day?","Selected half-day duration in the HR portal request.",low,2026-01-11
+L-104,Sick note,"When is a medical certificate required?","Required from the third consecutive sick day.",normal,2026-01-15
+L-105,Emergency leave,"My parent is in hospital. Which leave type should I use?","Approved three days of paid emergency leave.",high,2026-01-19
+L-106,Cancel approved leave,"Can I cancel leave that my manager already approved?","Cancelled in portal before payroll cutoff.",normal,2026-01-22
+L-107,Negative leave balance,"Can I request annual leave before I accrue it?","Denied because negative annual leave requires HR approval.",normal,2026-01-25
+L-108,Public holiday overlap,"A public holiday falls during my leave. Is it deducted?","Confirmed public holidays are not deducted from annual leave.",normal,2026-01-28
