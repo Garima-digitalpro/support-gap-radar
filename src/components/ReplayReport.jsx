@@ -2,7 +2,9 @@ import { ArrowLeft, FileSearch, Play } from "lucide-react";
 import { StatusDot, STATUS_LABELS } from "./StatusDot.jsx";
 
 export function ReplayReport({ cluster, tickets, replay, onBack, onDraft }) {
-  const afterById = new Map((replay?.evaluations || []).map((evaluation) => [evaluation.ticketId, evaluation]));
+  const afterById = new Map(
+    (replay?.evaluations || []).map((evaluation) => [evaluation.ticketId || evaluation.id, evaluation]),
+  );
 
   return (
     <section className="replay-page">

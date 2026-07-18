@@ -7,7 +7,12 @@ import { ReplayRail } from "./components/ReplayRail.jsx";
 import { ReplayReport } from "./components/ReplayReport.jsx";
 import { Sidebar } from "./components/Sidebar.jsx";
 import { SourcesPanel } from "./components/SourcesPanel.jsx";
-import { demoAnalysis, demoDraft, demoReplay, demoWorkspace } from "./data/demoWorkspace.js";
+import {
+  demoAnalysis,
+  demoDraftsByCluster,
+  demoReplaysByCluster,
+  demoWorkspace,
+} from "./data/demoWorkspace.js";
 import { postJson } from "./lib/api.js";
 import { exportMarkdown, parseDocumentFile, parseTicketsFile } from "./lib/fileParsers.js";
 
@@ -58,6 +63,7 @@ export default function App() {
   };
 
   const chooseCluster = (clusterId) => {
+    setError(null);
     if (clusterId !== selectedClusterId) {
       setSelectedClusterId(clusterId);
       setSelectedTicketId(null);
@@ -172,8 +178,11 @@ export default function App() {
       setWorkbenchOpen(true);
       return;
     }
-    if (analysis?.workspaceId === "demo-saas-support" && selectedCluster.clusterId === 0) {
-      const nextDraft = { ...demoDraft, clusterId: selectedCluster.clusterId };
+    const bundledDemoDraft = analysis?.workspaceId === "demo-saas-support"
+      ? demoDraftsByCluster[selectedCluster.clusterId]
+      : null;
+    if (bundledDemoDraft) {
+      const nextDraft = { ...bundledDemoDraft, clusterId: selectedCluster.clusterId };
       setDraft(nextDraft);
       setMarkdown(nextDraft.markdown);
       setReplay(null);
@@ -203,12 +212,14 @@ export default function App() {
 
   const replayPatch = async () => {
     if (!selectedCluster || !draft) return;
-    if (
-      analysis?.workspaceId === "demo-saas-support"
-      && selectedCluster.clusterId === 0
-      && markdown === demoDraft.markdown
-    ) {
-      setReplay(demoReplay);
+    const bundledDemoDraft = analysis?.workspaceId === "demo-saas-support"
+      ? demoDraftsByCluster[selectedCluster.clusterId]
+      : null;
+    const bundledDemoReplay = analysis?.workspaceId === "demo-saas-support"
+      ? demoReplaysByCluster[selectedCluster.clusterId]
+      : null;
+    if (bundledDemoDraft && bundledDemoReplay && markdown === bundledDemoDraft.markdown) {
+      setReplay(bundledDemoReplay);
       return;
     }
     setBusy("replaying");
